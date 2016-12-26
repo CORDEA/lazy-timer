@@ -1,0 +1,5 @@
+name: lazy_timer
+description: A new flutter project.
+dependencies:
+  flutter:
+    sdk: flutter
