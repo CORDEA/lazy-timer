@@ -21,6 +21,8 @@ class LazyTimer extends StatefulWidget {
 }
 
 class _StopwatchState extends State<LazyTimer> with TickerProviderStateMixin {
+  final _margin = 16.0;
+
   double _currentValue = 0.0;
 
   Stopwatch _stopwatch;
@@ -78,7 +80,7 @@ class _StopwatchState extends State<LazyTimer> with TickerProviderStateMixin {
         decoration: new BoxDecoration(backgroundColor: Colors.teal[500]),
         child: new Stack(children: [
           new Positioned(
-              bottom: 16.0,
+              bottom: _margin,
               left: 0.0,
               right: 0.0,
               child: new Column(children: [
@@ -91,7 +93,10 @@ class _StopwatchState extends State<LazyTimer> with TickerProviderStateMixin {
                     }),
                 new Container(
                     margin: new EdgeInsets.only(
-                        top: 16.0, bottom: 16.0, left: 32.0, right: 32.0),
+                        top: _margin,
+                        bottom: _margin,
+                        left: _margin * 2,
+                        right: _margin * 2),
                     child: new Stack(children: [
                       new Align(
                           alignment: FractionalOffset.center,
